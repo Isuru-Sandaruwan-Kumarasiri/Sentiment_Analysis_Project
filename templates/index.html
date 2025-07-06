@@ -307,10 +307,11 @@
 
             <div class="input-section">
                 <label class="input-label">Analyze New Text</label>
-                <div class="textarea-wrapper">
-                    <textarea class="sentiment-textarea" placeholder="Enter your text here to analyze sentiment..." id="text-input"></textarea>
-                </div>
-                <button class="submit-btn" onclick="analyzeText()">Analyze Sentiment</button>
+                <form class="textarea-wrapper" method="post">
+                    <textarea name="text" class="sentiment-textarea" placeholder="Enter your text here to analyze sentiment..." id="text-input"></textarea>
+                    <input class="submit-btn" type="submit">Analyze Sentiment</input>
+                </form>
+                
             </div>
 
             <div class="reviews-section">
@@ -328,11 +329,9 @@
 
     <script>
         
-        function analyzeText() {
-            const text = document.getElementById('text-input').value.trim();
-            if (!text) return;
+     
 
-        }
+        
     </script>
 </body>
 </html>
